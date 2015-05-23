@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Tracker</title>
+  <link href='http://fonts.googleapis.com/css?family=Cuprum:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="temp-area">
+    <div class="user-location">
+      <h1 class="user-city"></h1>
+      <h1 class="user-region"></h1>
+    </div>
+    <h1>Current Temperature:
+    <span></span>ºF</h1>
+    <h3>Search by:</h3>
+    <input type="text" placeholder="Zip Code" value="">
+    <button class="zip-search">Search</button>
+    <h3 class="h3-or">or</h3>
+    <button class="loc-search">Current location</button>
+    <h2 class="daytitle hidden">5-day Forecast</h2>
+  </div>
+
+  <div class="parent hidden">
+    <div class="display 1stday">
+      <h2 class="dayweek"></h2>
+      <h3 class="day-high"></h3>
+      <img class="day-img" src="" alt="" />
+      <h3 class="day-low"></h3>
+    </div>
+    <div class="display 2ndday">
+      <h2 class="dayweek"></h2>
+      <h3 class="day-high"></h3>
+      <img class="day-img"src="" alt="" />
+      <h3 class = "day-low"></h3>
+    </div>
+    <div class="display 3rdday">
+      <h2 class="dayweek"></h2>
+      <h3 class="day-high"></h3>
+      <img class="day-img"src="" alt="" />
+      <h3 class="day-low"></h3>
+    </div>
+    <div class="display 4thday">
+      <h2 class="dayweek"></h2>
+      <h3 class="day-high"></h3>
+      <img class="day-img" src="" alt="" />
+      <h3 class="day-low"></h3>
+    </div>
+    <div class="display 5thday">
+      <h2 class="dayweek"></h2>
+      <h3 class="day-high"></h3>
+      <img class="day-img" src="" alt="" />
+      <h3 class="day-low"></h3>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+  background-image: url("https://unsplash.imgix.net/uploads/14129863345840df499fc/0165574c?dpr=1.1&fit=crop&fm=jpg&h=550&q=75&w=950");
+  background-repeat: no-repeat;
+  background-size: 1550px 900px;
+  padding: 15px;
+  font-family: 'Cuprum', sans-serif;
+  overflow-x: hidden;
+}
+
+.user-location,
+.user-city {
+  display: inline-block;
+  float: right;
+}
+
+.user-city {
+  margin-bottom: 0px;
+}
+
+.temp-area {
+  color: white;
+}
+
+.parent {
+  width: 1300px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.display {
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  opacity: .75;
+  height: 260px;
+  width: 200px;
+  background-color: white;
+}
+
+button {
+  background-color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  outline: 0;
+}
+
+input {
+  height: 20px;
+  z-index: 2;
+  border: 0 none;
+}
+
+img {
+  opacity: 1;
+}
+
+.h3-or {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.display {
+  margin: 5px;
+}
+
+.seperator{
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
