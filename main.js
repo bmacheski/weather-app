@@ -1,9 +1,9 @@
+var API_URL = 'http://api.wunderground.com/api/3fa89a5b727cc31d/forecast10day/conditions'
 var zipbutton = document.querySelector('.zip-search');
 var locbutton = document.querySelector('.loc-search');
-var usercity = document.querySelector('user-location');
 var daytitle = document.querySelector('.daytitle')
 var parent = document.querySelector('.parent');
-var span = document.querySelector('span');
+var currenttempspan = document.querySelector('span');
 var usercity = document.querySelector('.user-city');
 var userregion = document.querySelector('.user-region');
 var daysofweek = document.querySelectorAll('.dayweek');
@@ -13,8 +13,8 @@ var weeklows = document.querySelectorAll('.day-low');
 
 zipbutton.onclick = function() {
   var zipinput = document.querySelector('input').value;
-  var API_URL = 'http://api.wunderground.com/api/3fa89a5b727cc31d/forecast10day/conditions/q/' + zipinput + '.json';
-  getJSON(API_URL, function(data) {
+  var ZIP_URL = API_URL + '/q/' + zipinput + '.json';
+  getJSON(ZIP_URL, function(data) {
     createWeatherEls(data);
   });
 }
@@ -23,8 +23,8 @@ locbutton.onclick = function() {
   navigator.geolocation.getCurrentPosition(function(location) {
     var lat = location.coords.latitude;
     var long = location.coords.longitude;
-    var API_URL = 'http://api.wunderground.com/api/3fa89a5b727cc31d/forecast10day/conditions/geolookup/q/' + lat + ',' + long + '.json';
-    getJSON(API_URL, function(data) {
+    var LOC_URL = API_URL + '/geolookup/q/' + lat + ',' + long + '.json';
+    getJSON(LOC_URL, function(data) {
       createWeatherEls(data);
     });
   });
@@ -35,7 +35,7 @@ function createWeatherEls(data) {
   parent.classList.remove('hidden');
   usercity.innerHTML = data.current_observation.display_location.city;
   userregion.innerHTML = data.current_observation.display_location.state;
-  span.innerHTML = data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
+  currenttempspan.innerHTML = data.current_observation.temp_f;
   for (var i = 0; i < daysofweek.length; i++) {
     daysofweek[i].innerHTML = data.forecast.simpleforecast.forecastday[i].date.weekday;
     weekhighs[i].innerHTML = data.forecast.simpleforecast.forecastday[i].high.fahrenheit;
