@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://unsplash.imgix.net/uploads/14129863345840df499fc/0165574c?dpr=1.1&fit=crop&fm=jpg&h=550&q=75&w=950");
+  background-image: url("http://www.freebiesgallery.com/wp-content/uploads/2014/02/blurred-background-2.jpg");
   background-repeat: no-repeat;
   background-size: 1550px 900px;
   padding: 15px;
@@ -47,6 +47,8 @@ button {
 }
 
 input {
+  font-size: 14px;
+  font-weight: bold;
   height: 20px;
   z-index: 2;
   border: 0 none;
